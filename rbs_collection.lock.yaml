@@ -11,6 +11,22 @@ gems:
   version: '0'
   source:
     type: stdlib
+- name: actionpack
+  version: '6.0'
+  source:
+    type: git
+    name: ruby/gem_rbs_collection
+    revision: c560bb18418e07a709f80954db2e2d975bbd6e14
+    remote: https://github.com/ruby/gem_rbs_collection.git
+    repo_dir: gems
+- name: actionview
+  version: '6.0'
+  source:
+    type: git
+    name: ruby/gem_rbs_collection
+    revision: c560bb18418e07a709f80954db2e2d975bbd6e14
+    remote: https://github.com/ruby/gem_rbs_collection.git
+    repo_dir: gems
 - name: activesupport
   version: '7.0'
   source:
@@ -28,6 +44,10 @@ gems:
     remote: https://github.com/ruby/gem_rbs_collection.git
     repo_dir: gems
 - name: base64
+  version: '0'
+  source:
+    type: stdlib
+- name: cgi
   version: '0'
   source:
     type: stdlib
@@ -91,6 +111,22 @@ gems:
   version: '0'
   source:
     type: stdlib
+- name: rack
+  version: '2.2'
+  source:
+    type: git
+    name: ruby/gem_rbs_collection
+    revision: c560bb18418e07a709f80954db2e2d975bbd6e14
+    remote: https://github.com/ruby/gem_rbs_collection.git
+    repo_dir: gems
+- name: railties
+  version: '6.0'
+  source:
+    type: git
+    name: ruby/gem_rbs_collection
+    revision: c560bb18418e07a709f80954db2e2d975bbd6e14
+    remote: https://github.com/ruby/gem_rbs_collection.git
+    repo_dir: gems
 - name: rainbow
   version: '3.0'
   source:
@@ -115,11 +151,27 @@ gems:
   version: '0'
   source:
     type: stdlib
+- name: tempfile
+  version: '0'
+  source:
+    type: stdlib
+- name: thor
+  version: '1.2'
+  source:
+    type: git
+    name: ruby/gem_rbs_collection
+    revision: c560bb18418e07a709f80954db2e2d975bbd6e14
+    remote: https://github.com/ruby/gem_rbs_collection.git
+    repo_dir: gems
 - name: time
   version: '0'
   source:
     type: stdlib
 - name: tsort
+  version: '0'
+  source:
+    type: stdlib
+- name: uri
   version: '0'
   source:
     type: stdlib
