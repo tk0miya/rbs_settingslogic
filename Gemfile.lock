@@ -2,7 +2,9 @@ PATH
   remote: .
   specs:
     rbs_settingslogic (0.1.0)
+      activesupport
       rbs
+      settingslogic
 
 GEM
   remote: https://rubygems.org/
@@ -78,6 +80,7 @@ GEM
       parser (>= 3.2.1.0)
     ruby-progressbar (1.13.0)
     securerandom (0.2.2)
+    settingslogic (2.0.9)
     steep (1.5.3)
       activesupport (>= 5.1)
       concurrent-ruby (>= 1.1.10)

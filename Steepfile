@@ -4,6 +4,7 @@ D = Steep::Diagnostic
 
 target :lib do
   signature "sig"
+  signature "lib/rbs_settingslogic/sig"
 
   check "lib"
 

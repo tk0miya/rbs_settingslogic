@@ -1,0 +1,19 @@
+module RbsSettingslogic
+  module Settingslogic
+    def self.generate: (singleton(::Settingslogic) klass) -> String
+
+    class Generator
+      attr_reader klass: singleton(::Settingslogic)
+
+      def initialize: (singleton(::Settingslogic) klass) -> void
+      def generate: () -> String
+
+      private
+
+      def format: (String rbs) -> String
+      def generate_classes: (singleton(::Settingslogic) | Hash[untyped, untyped] config) -> String
+      def generate_methods: (singleton(::Settingslogic) | Hash[untyped, untyped] config) -> String
+      def stringify_type: (untyped name, untyped value) -> String
+    end
+  end
+end

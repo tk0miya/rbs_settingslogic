@@ -11,6 +11,14 @@ gems:
   version: '0'
   source:
     type: stdlib
+- name: activesupport
+  version: '7.0'
+  source:
+    type: git
+    name: ruby/gem_rbs_collection
+    revision: c560bb18418e07a709f80954db2e2d975bbd6e14
+    remote: https://github.com/ruby/gem_rbs_collection.git
+    repo_dir: gems
 - name: ast
   version: '2.4'
   source:
@@ -23,6 +31,30 @@ gems:
   version: '0'
   source:
     type: stdlib
+- name: concurrent-ruby
+  version: '1.1'
+  source:
+    type: git
+    name: ruby/gem_rbs_collection
+    revision: c560bb18418e07a709f80954db2e2d975bbd6e14
+    remote: https://github.com/ruby/gem_rbs_collection.git
+    repo_dir: gems
+- name: date
+  version: '0'
+  source:
+    type: stdlib
+- name: erb
+  version: '0'
+  source:
+    type: stdlib
+- name: i18n
+  version: '1.10'
+  source:
+    type: git
+    name: ruby/gem_rbs_collection
+    revision: c560bb18418e07a709f80954db2e2d975bbd6e14
+    remote: https://github.com/ruby/gem_rbs_collection.git
+    repo_dir: gems
 - name: json
   version: '0'
   source:
@@ -31,7 +63,15 @@ gems:
   version: '0'
   source:
     type: stdlib
+- name: minitest
+  version: '0'
+  source:
+    type: stdlib
 - name: monitor
+  version: '0'
+  source:
+    type: stdlib
+- name: mutex_m
   version: '0'
   source:
     type: stdlib
@@ -64,6 +104,18 @@ gems:
   source:
     type: rubygems
 - name: rdoc
+  version: '0'
+  source:
+    type: stdlib
+- name: securerandom
+  version: '0'
+  source:
+    type: stdlib
+- name: singleton
+  version: '0'
+  source:
+    type: stdlib
+- name: time
   version: '0'
   source:
     type: stdlib
