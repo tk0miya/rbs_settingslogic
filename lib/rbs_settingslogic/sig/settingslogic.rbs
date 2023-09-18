@@ -19,6 +19,7 @@ class Settingslogic < Hash[untyped, untyped]
   def self.find: () { ([untyped, untyped]) -> boolish } -> [untyped, untyped]?
   def self.key?: (untyped key) -> bool
   def self.merge: (*Hash[untyped, untyped] other_hash) -> Hash[untyped, untyped]
+  def self.symbolize_keys: () -> Hash[Symbol, untyped]
   def self.to_h: () -> Hash[untyped, untyped]
   def self.values: () -> Array[untyped]
 
