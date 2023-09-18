@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require "active_support/core_ext/class"
+require "fileutils"
 require "pathname"
 require "rake/tasklib"
 
@@ -17,6 +18,7 @@ module RbsSettingslogic
       block&.call(self)
 
       define_clean_task
+      define_base_class_generate_task
       define_generate_task
       define_setup_task
     end
@@ -24,8 +26,18 @@ module RbsSettingslogic
     def define_setup_task
       desc "Run all tasks of rbs_settingslogic"
 
-      deps = [:"#{name}:clean", :"#{name}:generate"]
+      deps = [:"#{name}:clean", :"#{name}:generate", :"#{name}:base_class:generate"]
       task("#{name}:setup" => deps)
+    end
+
+    def define_base_class_generate_task
+      desc "Generate RBS files for base class"
+      task "#{name}:base_class:generate": :environment do
+        signature_root_dir.mkpath
+
+        basedir = Pathname(__FILE__).dirname
+        FileUtils.cp basedir / "sig/settingslogic.rbs", signature_root_dir
+      end
     end
 
     def define_generate_task
