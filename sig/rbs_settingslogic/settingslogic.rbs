@@ -13,7 +13,7 @@ module RbsSettingslogic
       def format: (String rbs) -> String
       def generate_classes: (singleton(::Settingslogic) | Hash[untyped, untyped] config) -> String
       def generate_methods: (singleton(::Settingslogic) | Hash[untyped, untyped] config) -> String
-      def stringify_type: (untyped name, untyped value) -> String
+      def stringify_type: (untyped name, untyped value, ?Integer? index) -> String
     end
   end
 end
