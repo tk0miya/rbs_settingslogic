@@ -67,6 +67,10 @@ gems:
   version: '0'
   source:
     type: stdlib
+- name: fileutils
+  version: '0'
+  source:
+    type: stdlib
 - name: i18n
   version: '1.10'
   source:

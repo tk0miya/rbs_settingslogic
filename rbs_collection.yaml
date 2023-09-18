@@ -16,6 +16,7 @@ path: .gem_rbs_collection
 gems:
   - name: actionpack
   - name: actionview
+  - name: fileutils
   - name: railties
   - name: rack
   - name: thor
