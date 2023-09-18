@@ -3,7 +3,7 @@ class Settingslogic < Hash[untyped, untyped]
   def self.each: [U] () { ([untyped, untyped] arg0) -> U } -> self
                | () -> Enumerator[[untyped, untyped], self]
   def self.get: (untyped key) -> untyped
-  def self.souce: (?untyped value) -> untyped
+  def self.source: (?untyped value) -> untyped
   def self.namespace: (?untyped value) -> untyped
   def self.suppress_errors: (?untyped value) -> untyped
   def self.[]: (untyped key) -> untyped
