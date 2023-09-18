@@ -36,14 +36,27 @@ module RbsSettingslogic
 
       def generate_classes(config)
         config.filter_map do |key, value|
-          next unless value.is_a?(Hash)
-
-          <<~RBS
-            class #{key.to_s.camelize} < ::Settingslogic
-              #{generate_classes(value)}
-              #{generate_methods(value)}
-            end
-          RBS
+          case value
+          when Hash
+            <<~RBS
+              class #{key.to_s.camelize} < ::Settingslogic
+                #{generate_classes(value)}
+                #{generate_methods(value)}
+              end
+            RBS
+          when Array
+            value.filter_map.with_index do |v, i|
+              case v
+              when Hash
+                <<~RBS
+                  class #{key.to_s.camelize}#{i} < ::Settingslogic
+                    #{generate_classes(v)}
+                    #{generate_methods(v)}
+                  end
+                RBS
+              end
+            end.join("\n")
+          end
         end.join("\n")
       end
 
@@ -53,12 +66,12 @@ module RbsSettingslogic
         end.join("\n")
       end
 
-      def stringify_type(name, value)
+      def stringify_type(name, value, index = nil)
         case value
         when Hash
-          "singleton(#{name.camelize})"
+          "singleton(#{name.camelize}#{index})"
         when Array
-          types = value.map { |v| stringify_type(name, v) }.uniq
+          types = value.map.with_index { |v, i| stringify_type(name, v, i) }.uniq
           "Array[#{types.join(" | ")}]"
         when NilClass
           "nil"

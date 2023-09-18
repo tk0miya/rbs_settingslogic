@@ -17,11 +17,15 @@ RSpec.describe RbsSettingslogic::Settingslogic do
       <<~RBS
         class Config < ::Settingslogic
           class Baz < ::Settingslogic
-            class Qux < ::Settingslogic
+            class Qux0 < ::Settingslogic
               def self.quux: () -> Integer
             end
 
-            def self.qux: () -> singleton(Qux)
+            class Qux1 < ::Settingslogic
+              def self.quux: () -> Integer
+            end
+
+            def self.qux: () -> Array[singleton(Qux0) | singleton(Qux1)]
           end
 
           def self.foo: () -> String
