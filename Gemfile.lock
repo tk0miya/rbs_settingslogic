@@ -42,7 +42,7 @@ GEM
       ffi (~> 1.0)
     rbs (3.2.1)
     regexp_parser (2.8.1)
-    rexml (3.3.3)
+    rexml (3.3.6)
       strscan
     rspec (3.13.0)
       rspec-core (~> 3.13.0)
